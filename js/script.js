@@ -10,10 +10,32 @@
 
 const { createApp } = Vue;
 
-createApp({
-    data() {
-      return {
-        logoImage : "./img/Logo.png"
-      }
+createApp ({
+  data() {
+    return {
+      logoImage : "./img/Logo.png",
+      tasks: [
+          { 
+            text: 'Fare i compiti', 
+            done: false 
+          }, 
+          { 
+            text: 'Fare la spesa',
+            done: true 
+          }, 
+          { 
+            text: 'Fare il bucato', 
+            done: false 
+          }
+      ]
     }
-  }).mount('#app');
+  },
+  // metodi
+  methods : {
+    // bottone per aggiungere nuove tasks:
+    addNewTask(){
+      
+    }
+  }
+
+}).mount('#app');

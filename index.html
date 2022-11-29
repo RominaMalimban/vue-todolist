@@ -23,13 +23,13 @@
         <!-- input new tasks -->
         <div class="new-task">
             <input type="text" placeholder="Inserisci una nuova task">
-            <button>Aggiungi</button>
+            <button @click = "addNewTask">Aggiungi</button>
         </div>
 
         <div class="task-container">
             <ul>
-                <li>
-                    prova
+                <li v-for="task in tasks">
+                    {{task.text}}
                     <i class="fa-solid fa-x"></i>
                 </li>
             </ul>
