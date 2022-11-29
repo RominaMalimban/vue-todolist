@@ -22,8 +22,8 @@
 
         <!-- input new tasks -->
         <div class="new-task">
-            <input type="text" placeholder="Inserisci una nuova task" v-model="newTask">
-            <button @click = "addNewTask">Aggiungi</button>
+            <input type="text" placeholder="Inserisci una nuova task" v-model="newTask" @keyup.enter="addNewTask">
+            <button @click="addNewTask">Aggiungi</button>
             <!-- errore -->
             <div class="error" v-if="error">
                 Devi inserire una task di almeno 8 lettere
@@ -35,7 +35,7 @@
             <ul>
                 <li v-for="task in tasks">
                     {{task.text}}
-                    <i class="fa-solid fa-x"></i>
+                    <i class="fa-solid fa-x" @click = "removeTask"></i>
                 </li>
             </ul>
         </div>
