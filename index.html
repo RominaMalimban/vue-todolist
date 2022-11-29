@@ -22,10 +22,15 @@
 
         <!-- input new tasks -->
         <div class="new-task">
-            <input type="text" placeholder="Inserisci una nuova task">
+            <input type="text" placeholder="Inserisci una nuova task" v-model="newTask">
             <button @click = "addNewTask">Aggiungi</button>
+            <!-- errore -->
+            <div class="error" v-if="error">
+                Devi inserire una task di almeno 8 lettere
+            </div>
         </div>
 
+        <!-- lista to do tasks -->
         <div class="task-container">
             <ul>
                 <li v-for="task in tasks">

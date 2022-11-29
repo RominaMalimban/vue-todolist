@@ -41,6 +41,12 @@ body{
     padding: 5px;
 }
 
+.error{
+    font-size: 14px;
+    text-align: center;
+    color: red;
+    margin-top: 5px;
+}
 .task-container{
     width: 50%;
     padding: 10px;

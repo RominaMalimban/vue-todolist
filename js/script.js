@@ -14,6 +14,8 @@ createApp ({
   data() {
     return {
       logoImage : "./img/Logo.png",
+      newTask : "",
+      error: false,
       tasks: [
           { 
             text: 'Fare i compiti', 
@@ -34,7 +36,16 @@ createApp ({
   methods : {
     // bottone per aggiungere nuove tasks:
     addNewTask(){
+      // tre condizioni: se la task ha meno di 8 caratteri; se input vuoto, se task è corretta: 
+      if(this.newTask.length < 8 || this.newTask === "" ){
+        this.error = true;
+      }else{
+        this.error = false;
+        this.tasks.push({text: this.newTask, done: false});
+      };
       
+      // all'invio svuoto l'input:
+      this.newTask = "";
     }
   }
 
