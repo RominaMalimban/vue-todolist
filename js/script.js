@@ -36,6 +36,7 @@ createApp ({
   methods : {
     // click per aggiungere nuove tasks:
     addNewTask(){
+
       // tre condizioni: se la task ha meno di 8 caratteri; se input vuoto; se task è corretta: 
       if(this.newTask.length < 8 || this.newTask === "" ){
         this.error = true;
@@ -47,9 +48,10 @@ createApp ({
       // all'invio svuoto l'input:
       this.newTask = "";
     },
+
     // click per rimuovere una task:
     removeTask(mioIndex){
-      this.tasks.splice(mioIndex, 1)
+      this.tasks.splice(mioIndex, 1);
     }
   }
 

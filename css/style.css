@@ -60,3 +60,7 @@ body{
     justify-content: space-between;
     margin: 5px 0;
 }
+
+.task-container h2{
+    text-align: center;
+}
